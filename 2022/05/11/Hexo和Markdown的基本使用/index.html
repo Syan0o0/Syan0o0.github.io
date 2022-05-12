@@ -16,19 +16,21 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="简介：Hexo更新博客步骤和Markdown的基本使用Hexo的基本使用1.创建新文章$ hexo new [layout] &lt;title&gt; 可以在命令中指定文章的布局（layout），默认为 post，可以通过修改 _config.yml 中的 default_layout 参数来指定默认布局,Hexo 有三种默认布局：post、page 和 draft。在创建这三种不同类型的文件时">
+    <meta name="description" content="简介：Hexo更新博客步骤和Markdown的基本使用 Hexo的基本使用 1.创建新文章 $ hexo new [layout] &lt;title&gt; 可以在命令中指定文章的布局（layout），默认为 post，可以通过修改 _config.yml 中的 default_layout 参数来指定默认布局,Hexo 有三种默认布局：post、page 和 draft。在创建">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo和Markdown的基本使用">
 <meta property="og:url" content="http://example.com/2022/05/11/Hexo%E5%92%8CMarkdown%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="SyanのBlog">
-<meta property="og:description" content="简介：Hexo更新博客步骤和Markdown的基本使用Hexo的基本使用1.创建新文章$ hexo new [layout] &lt;title&gt; 可以在命令中指定文章的布局（layout），默认为 post，可以通过修改 _config.yml 中的 default_layout 参数来指定默认布局,Hexo 有三种默认布局：post、page 和 draft。在创建这三种不同类型的文件时">
+<meta property="og:description" content="简介：Hexo更新博客步骤和Markdown的基本使用 Hexo的基本使用 1.创建新文章 $ hexo new [layout] &lt;title&gt; 可以在命令中指定文章的布局（layout），默认为 post，可以通过修改 _config.yml 中的 default_layout 参数来指定默认布局,Hexo 有三种默认布局：post、page 和 draft。在创建">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cpi">
 <meta property="article:published_time" content="2022-05-11T15:01:53.000Z">
-<meta property="article:modified_time" content="2022-05-11T16:48:50.799Z">
+<meta property="article:modified_time" content="2022-05-12T09:23:43.373Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="Markdown">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.zhihu.com/equation?tex=%5Cpi">
   
   
   <title>Hexo和Markdown的基本使用 - SyanのBlog</title>
@@ -198,7 +200,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      654 字
+      1.3k 字
     </span>
   
 
@@ -207,7 +209,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      6 分钟
+      11 分钟
     </span>
   
 
@@ -239,90 +241,196 @@
             <h1 style="display: none">Hexo和Markdown的基本使用</h1>
             
             <div class="markdown-body">
-              <h1 id="简介：Hexo更新博客步骤和Markdown的基本使用"><a href="#简介：Hexo更新博客步骤和Markdown的基本使用" class="headerlink" title="简介：Hexo更新博客步骤和Markdown的基本使用"></a>简介：Hexo更新博客步骤和Markdown的基本使用</h1><h2 id="Hexo的基本使用"><a href="#Hexo的基本使用" class="headerlink" title="Hexo的基本使用"></a>Hexo的基本使用</h2><h4 id="1-创建新文章"><a href="#1-创建新文章" class="headerlink" title="1.创建新文章"></a>1.创建新文章</h4><p><code>$ hexo new [layout] &lt;title&gt;</code></p>
-<p>可以在命令中指定文章的布局（layout），默认为 <code>post</code>，可以通过修改 <code>_config.yml</code> 中的 <code>default_layout</code> 参数来指定默认布局,Hexo 有三种默认布局：<code>post</code>、<code>page</code> 和 <code>draft</code>。在创建这三种不同类型的文件时，它们将会被保存到Blog中不同的路径。</p>
-<h4 id="2-Front-matter"><a href="#2-Front-matter" class="headerlink" title="2.Front-matter"></a>2.Front-matter</h4><p>Front-matter 是文件最上方以 <code>---</code> 分隔的区域，用于指定个别文件的变量，举例来说：</p>
+              <h1
+id="简介hexo更新博客步骤和markdown的基本使用">简介：Hexo更新博客步骤和Markdown的基本使用</h1>
+<h2 id="hexo的基本使用">Hexo的基本使用</h2>
+<h4 id="创建新文章">1.创建新文章</h4>
+<p><code>$ hexo new [layout] &lt;title&gt;</code></p>
+<p>可以在命令中指定文章的布局（layout），默认为
+<code>post</code>，可以通过修改 <code>_config.yml</code> 中的
+<code>default_layout</code> 参数来指定默认布局,Hexo
+有三种默认布局：<code>post</code>、<code>page</code> 和
+<code>draft</code>。在创建这三种不同类型的文件时，它们将会被保存到Blog中不同的路径。</p>
+<h4 id="front-matter">2.Front-matter</h4>
+<p>Front-matter 是文件最上方以 <code>---</code>
+分隔的区域，用于指定个别文件的变量，举例来说：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">Hello</span> <span class="hljs-string">World</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2013</span><span class="hljs-string">/7/13</span> <span class="hljs-number">20</span><span class="hljs-string">:46:25</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure>
-
 <p>以下是预先定义的参数，您可在模板中使用这些参数值并加以利用。</p>
 <table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 26%" />
+<col style="width: 61%" />
+</colgroup>
 <thead>
-<tr>
-<th align="left">参数</th>
-<th align="left">描述</th>
-<th align="left">默认值</th>
+<tr class="header">
+<th style="text-align: left;">参数</th>
+<th style="text-align: left;">描述</th>
+<th style="text-align: left;">默认值</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left"><code>layout</code></td>
-<td align="left">布局</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration#%E6%96%87%E7%AB%A0"><code>config.default_layout</code></a></td>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>layout</code></td>
+<td style="text-align: left;">布局</td>
+<td style="text-align: left;"><a
+target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration#文章"><code>config.default_layout</code></a></td>
 </tr>
-<tr>
-<td align="left"><code>title</code></td>
-<td align="left">标题</td>
-<td align="left">文章的文件名</td>
+<tr class="even">
+<td style="text-align: left;"><code>title</code></td>
+<td style="text-align: left;">标题</td>
+<td style="text-align: left;">文章的文件名</td>
 </tr>
-<tr>
-<td align="left"><code>date</code></td>
-<td align="left">建立日期</td>
-<td align="left">文件建立日期</td>
+<tr class="odd">
+<td style="text-align: left;"><code>date</code></td>
+<td style="text-align: left;">建立日期</td>
+<td style="text-align: left;">文件建立日期</td>
 </tr>
-<tr>
-<td align="left"><code>updated</code></td>
-<td align="left">更新日期</td>
-<td align="left">文件更新日期</td>
+<tr class="even">
+<td style="text-align: left;"><code>updated</code></td>
+<td style="text-align: left;">更新日期</td>
+<td style="text-align: left;">文件更新日期</td>
 </tr>
-<tr>
-<td align="left"><code>comments</code></td>
-<td align="left">开启文章的评论功能</td>
-<td align="left">true</td>
+<tr class="odd">
+<td style="text-align: left;"><code>comments</code></td>
+<td style="text-align: left;">开启文章的评论功能</td>
+<td style="text-align: left;">true</td>
 </tr>
-<tr>
-<td align="left"><code>tags</code></td>
-<td align="left">标签（不适用于分页）</td>
-<td align="left"></td>
+<tr class="even">
+<td style="text-align: left;"><code>tags</code></td>
+<td style="text-align: left;">标签（不适用于分页）</td>
+<td style="text-align: left;"></td>
 </tr>
-<tr>
-<td align="left"><code>categories</code></td>
-<td align="left">分类（不适用于分页，使用）</td>
-<td align="left"></td>
+<tr class="odd">
+<td style="text-align: left;"><code>categories</code></td>
+<td style="text-align: left;">分类（不适用于分页，使用）</td>
+<td style="text-align: left;"></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p>其中</p>
 <figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><span class="hljs-attribute">categories</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">Diary</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">Life</span><br></code></pre></td></tr></table></figure>
-
 <p>会使分类<code>Life</code>成为<code>Diary</code>的子分类</p>
 <figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs subunit"><span class="hljs-keyword">tags:</span><br>  - Diary<br>  - Life<br></code></pre></td></tr></table></figure>
-
 <p>可以添加多个标签</p>
-<h4 id="3-发布和部署博客"><a href="#3-发布和部署博客" class="headerlink" title="3.发布和部署博客"></a>3.发布和部署博客</h4><p>清除文件：<code>$ hexo clean</code></p>
-<p>文件生成：<code>$ hexo g </code></p>
+<h4 id="发布和部署博客">3.发布和部署博客</h4>
+<p>清除文件：<code>$ hexo clean</code></p>
+<p>文件生成：<code>$ hexo g</code></p>
 <p>部署到github：<code>$ hexo  d</code></p>
-<h2 id="Markdown的基本使用"><a href="#Markdown的基本使用" class="headerlink" title="Markdown的基本使用"></a>Markdown的基本使用</h2><table>
+<h4 id="latex数学公式">4.Latex数学公式</h4>
+<h5 id="设置主题配置"><strong>1. 设置主题配置</strong></h5>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">post:</span><br>  <span class="hljs-attr">math:</span><br>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-attr">specific:</span> <span class="hljs-literal">false</span><br>    <span class="hljs-attr">engine:</span> <span class="hljs-string">mathjax</span><br></code></pre></td></tr></table></figure>
+<p><code>specific</code>: 建议开启。当为 true 时，只有在文章 <a
+target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/front-matter">Front-matter (opens new
+window)</a>里指定 <code>math: true</code>
+才会在文章页启动公式转换，以便在页面不包含公式时提高加载速度。</p>
+<p><code>engine</code>: 公式引擎，目前支持 <code>mathjax</code> 或
+<code>katex</code>。</p>
+<h5 id="更换-markdown-渲染器"><strong>2. 更换 Markdown
+渲染器</strong></h5>
+<p>由于 Hexo 默认的 Markdown
+渲染器不支持复杂公式，所以必须更换渲染器。</p>
+<p>先卸载原有渲染器：</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">npm uninstall hexo-renderer-marked <span class="hljs-comment">--save</span><br></code></pre></td></tr></table></figure>
+<p>然后根据上方配置不同的 <code>engine</code>，推荐更换如下渲染器：</p>
+<p>mathjax:<code>npm install hexo-renderer-pandoc --save</code>
+<strong>并且还需<a
+target="_blank" rel="noopener" href="https://github.com/jgm/pandoc/blob/master/INSTALL.md">安装
+Pandoc(opens new window)</a></strong></p>
+<p>katex:
+<code>npm install @upupming/hexo-renderer-markdown-it-plus --save</code></p>
+<h5 id="安装完成后执行-hexo-clean"><strong>3. 安装完成后执行
+<code>hexo clean</code></strong></h5>
+<h2 id="markdown的基本使用">Markdown的基本使用</h2>
+<h4 id="基本操作">1.基本操作</h4>
+<table>
 <thead>
-<tr>
+<tr class="header">
 <th>操作</th>
 <th>描述</th>
 </tr>
 </thead>
-<tbody><tr>
-<td>&#96;&#96;&#96;</td>
-<td>插入代码块</td>
-</tr>
-<tr>
-<td>&#96;</td>
+<tbody>
+<tr class="odd">
+<td>``<code>| 插入代码块   | |</code></td>
 <td>插入单行代码</td>
 </tr>
-<tr>
-<td></td>
+<tr class="even">
+<td>$</td>
+<td>插入公式</td>
+</tr>
+</tbody>
+</table>
+<h4 id="markdown中写数学公式">2.markdown中写数学公式</h4>
+<table>
+<colgroup>
+<col style="width: 49%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>公式或字母</th>
+<th>写法</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>希腊字母<em>α</em>和<em>γ</em></td>
+<td>; </td>
+</tr>
+<tr class="even">
+<td>上下标</td>
+<td>C_n^2</td>
+</tr>
+<tr class="odd">
+<td>矢量</td>
+<td> </td>
+</tr>
+<tr class="even">
+<td>未知数符号(A)</td>
 <td></td>
 </tr>
-<tr>
-<td></td>
+<tr class="odd">
+<td><strong>分数(x/y)</strong></td>
 <td></td>
 </tr>
-</tbody></table>
+<tr class="even">
+<td>分组(10的10次方)</td>
+<td>10^{10}</td>
+</tr>
+<tr class="odd">
+<td>求和(a1到an的和)</td>
+<td>_{i=1}^n{a_i}</td>
+</tr>
+<tr class="even">
+<td>极限</td>
+<td>_{x}{x^2}</td>
+</tr>
+<tr class="odd">
+<td>积分</td>
+<td>_0^</td>
+</tr>
+<tr class="even">
+<td>开根式</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>特殊函数</td>
+<td>x x (A,B,C)</td>
+</tr>
+<tr class="even">
+<td><strong>矩阵matrix</strong></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><img src="https://www.zhihu.com/equation?tex=%5Cpi" srcset="/img/loading.gif" lazyload
+alt="[公式]" /></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><a
+target="_blank" rel="noopener" href="https://www.jianshu.com/p/383e8149136c">详细数学公式使用</a></p>
 
             </div>
             <hr>
@@ -358,6 +466,12 @@
                 <div class="post-prevnext">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2022/05/12/Assignment0/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Assignment0</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
