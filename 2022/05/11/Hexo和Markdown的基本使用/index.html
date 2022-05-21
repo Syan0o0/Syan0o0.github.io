@@ -23,14 +23,12 @@
 <meta property="og:site_name" content="SyanのBlog">
 <meta property="og:description" content="简介：Hexo更新博客步骤和Markdown的基本使用 Hexo的基本使用 1.创建新文章 $ hexo new [layout] &lt;title&gt; 可以在命令中指定文章的布局（layout），默认为 post，可以通过修改 _config.yml 中的 default_layout 参数来指定默认布局,Hexo 有三种默认布局：post、page 和 draft。在创建">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cpi">
 <meta property="article:published_time" content="2022-05-11T15:01:53.000Z">
-<meta property="article:modified_time" content="2022-05-12T09:23:43.373Z">
+<meta property="article:modified_time" content="2022-05-21T07:26:10.089Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="Markdown">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://www.zhihu.com/equation?tex=%5Cpi">
   
   
   <title>Hexo和Markdown的基本使用 - SyanのBlog</title>
@@ -200,7 +198,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.3k 字
+      2.1k 字
     </span>
   
 
@@ -209,7 +207,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      11 分钟
+      18 分钟
     </span>
   
 
@@ -318,7 +316,7 @@ target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration#�
 <p>文件生成：<code>$ hexo g</code></p>
 <p>部署到github：<code>$ hexo  d</code></p>
 <h4 id="latex数学公式">4.Latex数学公式</h4>
-<h5 id="设置主题配置"><strong>1. 设置主题配置</strong></h5>
+<h5 id="设置主题配置"><strong>4.1 设置主题配置</strong></h5>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">post:</span><br>  <span class="hljs-attr">math:</span><br>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-attr">specific:</span> <span class="hljs-literal">false</span><br>    <span class="hljs-attr">engine:</span> <span class="hljs-string">mathjax</span><br></code></pre></td></tr></table></figure>
 <p><code>specific</code>: 建议开启。当为 true 时，只有在文章 <a
 target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/front-matter">Front-matter (opens new
@@ -326,7 +324,7 @@ window)</a>里指定 <code>math: true</code>
 才会在文章页启动公式转换，以便在页面不包含公式时提高加载速度。</p>
 <p><code>engine</code>: 公式引擎，目前支持 <code>mathjax</code> 或
 <code>katex</code>。</p>
-<h5 id="更换-markdown-渲染器"><strong>2. 更换 Markdown
+<h5 id="更换-markdown-渲染器"><strong>4.2 更换 Markdown
 渲染器</strong></h5>
 <p>由于 Hexo 默认的 Markdown
 渲染器不支持复杂公式，所以必须更换渲染器。</p>
@@ -339,8 +337,45 @@ target="_blank" rel="noopener" href="https://github.com/jgm/pandoc/blob/master/I
 Pandoc(opens new window)</a></strong></p>
 <p>katex:
 <code>npm install @upupming/hexo-renderer-markdown-it-plus --save</code></p>
-<h5 id="安装完成后执行-hexo-clean"><strong>3. 安装完成后执行
+<h5 id="安装完成后执行-hexo-clean"><strong>4.3 安装完成后执行
 <code>hexo clean</code></strong></h5>
+<h4 id="评论模块的实现">5.评论模块的实现</h4>
+<p>开启评论需要在<strong>主题配置</strong>中开启并指定评论模块：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">post:</span><br>  <span class="hljs-attr">comments:</span><br>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-attr">type:</span> <span class="hljs-string">disqus</span><br></code></pre></td></tr></table></figure>
+<p>然后在下方还要设置对应评论模块的参数，比如 disqus 对应设置：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">disqus:</span><br>  <span class="hljs-attr">shortname:</span> <span class="hljs-string">fluid</span><br></code></pre></td></tr></table></figure>
+<p>当前支持的评论插件如下：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://valine.js.org/configuration.html">Valine (opens new
+window)</a>:基于 LeanCloud</li>
+<li><a target="_blank" rel="noopener" href="https://waline.js.org/">Waline (opens new window)</a>: 从
+Valine 衍生而来，额外增加了服务端和多种功能</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/gitalk/gitalk">Gitalk (opens new
+window)</a>: 基于 GitHub Issues</li>
+<li><a target="_blank" rel="noopener" href="https://utteranc.es/">Utterances (opens new window)</a>:
+基于 GitHub Issues</li>
+<li><a target="_blank" rel="noopener" href="https://disqus.com/">Disqus (opens new window)</a>:
+基于第三方的服务</li>
+<li><a target="_blank" rel="noopener" href="http://changyan.kuaizhan.com/">畅言 (opens new window)</a>:
+基于第三方的服务</li>
+<li><a target="_blank" rel="noopener" href="https://www.livere.com/">来必力(Livere) (opens new
+window)</a>: 基于第三方的服务</li>
+<li><a target="_blank" rel="noopener" href="https://remark42.com/">Remark42 (opens new window)</a>:
+需要自托管服务端</li>
+<li><a target="_blank" rel="noopener" href="https://twikoo.js.org/">Twikoo (opens new window)</a>:
+基于腾讯云开发</li>
+<li><a target="_blank" rel="noopener" href="https://cusdis.com/">Cusdis (opens new window)</a>:
+基于第三方服务或自托管服务</li>
+</ul>
+<p>使用方式和参数设置请点击上面链接查看各自的文档。</p>
+<p>国内用户推荐使用 Valine、Waline 或者 twikoo</p>
+<p>如果设置后评论模块没有显示，说明配置没有完成，或者配置有误出现报错（请在浏览器控制台查看具体报错）</p>
+<p>如果想在某个文章页关闭评论，或者想在某个自定义页面开启评论，可以通过在
+<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/front-matter">Front-matter (opens
+new window)</a>设置 <code>comment: bool</code> 来控制评论开关，或者通过
+<code>comment: 'type'</code> 来开启指定的评论插件。</p>
+<p>例如在关于页开启并指定评论插件：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">关于页</span><br><span class="hljs-attr">layout:</span> <span class="hljs-string">about</span><br><span class="hljs-attr">index_img:</span> <span class="hljs-string">/img/example.jpg</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2019-10-10 10:00:00</span><br><span class="hljs-attr">comment:</span> <span class="hljs-string">&#x27;valine&#x27;</span><br><span class="hljs-meta">---</span><br><span class="hljs-string">以下是正文内容</span><br></code></pre></td></tr></table></figure>
 <h2 id="markdown的基本使用">Markdown的基本使用</h2>
 <h4 id="基本操作">1.基本操作</h4>
 <table>
@@ -364,8 +399,8 @@ Pandoc(opens new window)</a></strong></p>
 <h4 id="markdown中写数学公式">2.markdown中写数学公式</h4>
 <table>
 <colgroup>
-<col style="width: 49%" />
-<col style="width: 50%" />
+<col style="width: 23%" />
+<col style="width: 76%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -380,7 +415,7 @@ Pandoc(opens new window)</a></strong></p>
 </tr>
 <tr class="even">
 <td>上下标</td>
-<td>C_n^2</td>
+<td>C_n^2 如果超过一个字母则需要用{}括起来</td>
 </tr>
 <tr class="odd">
 <td>矢量</td>
@@ -423,8 +458,7 @@ Pandoc(opens new window)</a></strong></p>
 <td></td>
 </tr>
 <tr class="odd">
-<td><img src="https://www.zhihu.com/equation?tex=%5Cpi" srcset="/img/loading.gif" lazyload
-alt="[公式]" /></td>
+<td>$ $</td>
 <td></td>
 </tr>
 </tbody>
@@ -617,6 +651,48 @@ target="_blank" rel="noopener" href="https://www.jianshu.com/p/383e8149136c">详
 
 
 
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        loader: {
+          load: ['ui/lazy']
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" ></script>
+
+  
 
 
 
